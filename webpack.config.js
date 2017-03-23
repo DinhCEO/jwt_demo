@@ -9,10 +9,9 @@ module.exports = {
         filename : 'bundle.js',
         path : path.resolve(__dirname, 'dist')
     },
-    module : {
-        rules : {
-            test : /\.(js)$/,
-            use : 'babel-loader'
-        }
+    module: {
+        loaders: [
+            { test: path.join(__dirname, 'client/app'), loader: "babel-loader" }
+        ]
     }
 };
