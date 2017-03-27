@@ -11,7 +11,7 @@ class Demo {
         let element = document.createElement('div');
 
         /* lodash is required for the next line to work */
-        element.innerHTML = _.join(['Hello', 'webpack component demo'], ' ');
+        element.innerHTML = _.join(['<button webpack component demo'], ' ');
 
         return element;
     }

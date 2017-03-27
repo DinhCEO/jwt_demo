@@ -3,4 +3,4 @@
  */
 const Demo = require('./app/demo');
 
-document.body.appendChild(new Demo().render());
+//document.body.appendChild(new Demo().render());
