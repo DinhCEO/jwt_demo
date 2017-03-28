@@ -5,8 +5,13 @@ require('dotenv').config();
 
 module.exports = {
     providers : [
+        require('./knex/knex.provider'),
         require('./bcrypt/bcrypt.provider'),
         require('./express/express-server.provider'),
+        require('./auth/authorizer/authrozer.provider'),
+        require('./auth/boot/auth.boot'),
+        require('./auth/authenticator/authenticator.provider'),
+        require('./jwt/jwt.provider'),
         //todo add provider
     ],
     app : {
@@ -16,7 +21,7 @@ module.exports = {
     bcrypt : {
         rounds : 10
     },
-    knex : require('knex'),
+    knexfile : require('./knexfile'),
 
     auth : {
         key : process.env.SERVER_AUTH_KEY || 'secret'
@@ -25,10 +30,13 @@ module.exports = {
         middlewares : [
             require('body-parser').json({
                 extend : true
-            }),
+            })
         ],
         cors : {
             origin : "*"
+        },
+        router : {
+            //todo router
         }
     }
 };

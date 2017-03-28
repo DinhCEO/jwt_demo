@@ -8,7 +8,7 @@ const Bootstrap = require('./bootstrap');
 co.wrap(function *() {
     let container = yield Bootstrap();
 
-    let kernel = yield container.make('jwt-app.http.kernel');
+    let kernel = yield container.make('http.express');
     let config = yield container.make('config');
 
 
