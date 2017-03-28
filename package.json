@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "co": "^4.6.0",
+    "co-express": "^2.0.0",
     "cors": "^2.8.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
@@ -23,6 +25,7 @@
     "knex": "^0.12.9",
     "lodash": "^4.17.4",
     "mysql": "^2.13.0",
+    "nodemon": "^1.11.0",
     "random-key": "^0.3.2",
     "sphinx-container": "git+https://github.com/sphinx-software/es6-container.git"
   },
